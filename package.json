@@ -2,10 +2,10 @@
   "name": "yun-node",
   "version": "1.1.0",
   "description": "Get to know Node CLI `npx yun-node`",
-  "main": "src/index.js",
+  "main": "index.js",
   "bin": {
-    "yun-node": "src/index.js",
-    "yun": "src/index.js"
+    "yun-node": "index.js",
+    "yun": "index.js"
   },
   "scripts": {
     "format": "prettier --write \"./**/*.{js,json}\""

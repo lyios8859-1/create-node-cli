@@ -5,10 +5,9 @@
  * setp2: npm link 到全局
  * setp3: 执行 package.json 中的 bin 字段中的命令, 这里设置 bin: {"yun": "src/index.js"}, 就可以执行 `yun` 命令
  */
-const clearConsole = require("./utils/clear-any-console");
-const welcome = require("./cli/cli-welcome");
+const welcome = require("./utils/cli-welcome");
 
-const pkgJson = require("../package.json");
+const pkgJson = require("./package.json");
 
 welcome({
   title: pkgJson.name,

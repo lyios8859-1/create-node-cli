@@ -1,6 +1,6 @@
 /* CLI WELCOME */
 const chalk = require("chalk");
-const clearConsole = require("../utils/clear-any-console");
+const clearConsole = require("./clear-any-console");
 
 const dim = chalk.dim;
 
