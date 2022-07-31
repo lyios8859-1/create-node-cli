@@ -1,6 +1,6 @@
 {
   "name": "yun-node",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Get to know Node CLI `npx yun-node`.",
   "main": "src/index.js",
   "bin": {
