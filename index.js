@@ -13,12 +13,14 @@ const debug = require("./utils/debug");
 const { bio, ad, social } = require("./utils/data");
 
 const log = console.log;
+const { flags, input } = cli;
 
 !(async () => {
   init();
-  log(chalk.dim(bio));
 
-  const { flags, input } = cli;
+  input.includes("help") && cli.showHelp(0);
+
+  log(chalk.dim(bio));
 
   flags.social && log(social);
 
