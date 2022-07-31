@@ -21,7 +21,6 @@ const { flags, input } = cli;
 
 !(async () => {
   init(flags.minimal, flags.clear);
-
   input.includes("help") && cli.showHelp(0);
 
   flags.bio && log(chalk.dim(bio));
