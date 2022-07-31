@@ -19,7 +19,7 @@ const blueI = chalk.blue.inverse;
 
 const log = console.log;
 
-module.exports = (options) => {
+module.exports = options => {
   const defaultOptions = {
     type: "error",
     msg: "You forgot to define all options.",
@@ -45,3 +45,26 @@ module.exports = (options) => {
     log(`\n${sym.error} ${redI(printName)} ${red(msg)}\n`);
   }
 };
+
+/**
+alerts({
+  type: "success",
+  msg: "success.",
+  name: "",
+});
+alerts({
+  type: "warning",
+  msg: "warning.",
+  name: "",
+});
+alerts({
+  type: "info",
+  msg: "info.",
+  name: "",
+});
+alerts({
+  type: "error",
+  msg: "error.",
+  name: "",
+});
+*/

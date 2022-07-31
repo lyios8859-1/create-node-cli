@@ -7,6 +7,7 @@
     "yun-node": "index.js"
   },
   "scripts": {
+    "test": "node test.js",
     "format": "prettier --write \"./**/*.{js,json}\""
   },
   "keywords": [

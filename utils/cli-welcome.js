@@ -28,7 +28,6 @@ module.exports = (options = {}) => {
   const { title, tagLine, description, bgColor, color, bold, clear, version } =
     opts;
 
-  // Configure.
   const bg = bold
     ? chalk.hex(bgColor).inverse.bold
     : chalk.hex(bgColor).inverse;
@@ -36,8 +35,6 @@ module.exports = (options = {}) => {
   clear && clearConsole();
 
   log();
-  log(
-    `${clr(`${bg(title)}`)} v${version} ${dim(tagLine)} \n${dim(description)}`
-  );
+  log(`${clr(bg(title))} v${version} ${dim(tagLine)} \n${dim(description)}`);
   log();
 };
