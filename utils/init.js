@@ -14,7 +14,7 @@ module.exports = () => {
     tagLine: "Hello, nice to meet you!",
     description: pkgJson.description,
     version: pkgJson.version,
-    bgColor: "#FADC00",
+    bgColor: "#6cc24a",
     color: "#000000",
     bold: true,
     clear: true,

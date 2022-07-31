@@ -7,20 +7,24 @@
  */
 const chalk = require("chalk");
 
-const { bio, ad, social } = require("./utils/data");
-const alerts = require("./utils/cli-alerts");
 const init = require("./utils/init");
+const cli = require("./utils/cli");
+const debug = require("./utils/debug");
+const { bio, ad, social } = require("./utils/data");
 
 const log = console.log;
 
 !(async () => {
   init();
+  log(chalk.dim(bio));
 
-  log(`${chalk.dim(bio)}
-${social}
+  const { flags, input } = cli;
 
-${chalk.blue(ad)}
-`);
+  flags.social && log(social);
 
-  alerts({ type: "info", msg: "Node CLI - Test", name: "Tip" });
+  flags.ad && log(chalk.blue(ad));
+
+  debug({ flags, input }, flags.debug);
+
+  log("\nNode CLI - Test\n");
 })();
