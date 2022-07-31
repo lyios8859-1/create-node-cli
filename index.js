@@ -31,7 +31,8 @@ log(`${chalk.dim(bio)}
 ${social}
 ${chalk.dim(blogName + ": " + blog)}
 
-${chalk.blue(ad)}`);
+${chalk.blue(ad)}
+`);
 
 alerts({
   type: "success",
@@ -54,4 +55,4 @@ alerts({
   name: "",
 });
 
-log("\nNode CLI - Test\n");
+log("Node CLI - Test\n");

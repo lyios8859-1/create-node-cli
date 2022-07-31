@@ -3,6 +3,7 @@ const chalk = require("chalk");
 const clearConsole = require("./clear-any-console");
 
 const dim = chalk.dim;
+const log = console.log;
 
 /**
  * Welcome
@@ -34,11 +35,9 @@ module.exports = (options = {}) => {
   const clr = bold ? chalk.hex(color).bold : chalk.hex(color);
   clear && clearConsole();
 
-  console.log();
-  console.log(
-    `${clr(`${bg(` ${title} `)}`)} v${version} ${dim(tagLine)} \n${dim(
-      description
-    )}`
+  log();
+  log(
+    `${clr(`${bg(title)}`)} v${version} ${dim(tagLine)} \n${dim(description)}`
   );
-  console.log();
+  log();
 };
