@@ -16,14 +16,12 @@ const log = console.log;
 const { flags, input } = cli;
 
 !(async () => {
-  init();
+  init(flags.minimal, flags.clear);
 
   input.includes("help") && cli.showHelp(0);
 
-  log(chalk.dim(bio));
-
+  flags.bio && log(chalk.dim(bio));
   flags.social && log(social);
-
   flags.ad && log(chalk.blue(ad));
 
   debug({ flags, input }, flags.debug);
