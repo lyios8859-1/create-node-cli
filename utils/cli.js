@@ -16,6 +16,8 @@ const helpText = `
     ${yellow("--no-ad")}       Don't print the Ad info
     ${yellow("clear")}         Clear the console ${dim("(DEFATULT: true)")}
     ${yellow("--no-clear")}    Don't clear the console
+    ${yellow("-s")}, ${yellow("--stats")}   Print stats info
+    ${yellow("-p")}, ${yellow("--posts")}   Print posts info
     ${yellow("-d")}, ${yellow("--debug")}   Print debug info
     ${yellow("-m")}, ${yellow("--minimal")} Print minimal info
     ${yellow("-v")}, ${yellow("--version")} Print CLI version
@@ -50,6 +52,14 @@ const options = {
     ad: {
       type: "boolean",
       default: true,
+    },
+    posts: {
+      type: "boolean",
+      alias: "p",
+    },
+    stats: {
+      type: "boolean",
+      alias: "s",
     },
     debug: {
       type: "boolean",

@@ -1,7 +1,6 @@
 const boxen = require("boxen");
 
 const welcome = require("./cli-welcome");
-const alerts = require("./cli-alerts");
 const checkNode = require("./cli-check-node-version");
 const unhandled = require("./cli-handle-unhandled");
 

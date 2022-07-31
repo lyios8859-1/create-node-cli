@@ -10,7 +10,11 @@ const chalk = require("chalk");
 const init = require("./utils/init");
 const cli = require("./utils/cli");
 const debug = require("./utils/debug");
-const { bio, ad, social } = require("./utils/data");
+const alert = require("./utils/cli-alerts");
+
+const stats = require("./utils/stats");
+const posts = require("./utils/posts");
+const { bio, ad, social, blog, blogName } = require("./utils/data");
 
 const log = console.log;
 const { flags, input } = cli;
@@ -22,9 +26,20 @@ const { flags, input } = cli;
 
   flags.bio && log(chalk.dim(bio));
   flags.social && log(social);
-  flags.ad && log(chalk.blue(ad));
+  flags.ad && alert({ type: "info", msg: ad, name: "Ad." });
+
+  if (flags.posts) {
+    alert({ type: "info", msg: blog, name: blogName });
+    // 请求文档帖子;
+    await posts();
+  }
+
+  // 请求 github, 获取统计数据
+  flags.stats && (await stats());
 
   debug({ flags, input }, flags.debug);
 
-  log("\nNode CLI - Test\n");
+  log("Node CLI - Test\n");
 })();
+
+// 查看包的大小: https://packagephobia.com/
